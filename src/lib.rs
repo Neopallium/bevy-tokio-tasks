@@ -1,7 +1,8 @@
 use std::future::Future;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Arc;
-use bevy::prelude::*;
+use bevy_app::{App, Plugin, Update};
+use bevy_ecs::{prelude::World, system::Resource};
 
 use tokio::{runtime::Runtime, task::JoinHandle};
 
